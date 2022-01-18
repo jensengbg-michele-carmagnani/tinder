@@ -9,7 +9,7 @@ const Stack = createNativeStackNavigator();
 const StackNavigator = () => {
 
   const {user} = useAuth()
-  console.log('username', user)
+  
   return (
     <Stack.Navigator>
       {user ? (
