@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/core';
 import tw from 'tailwind-rn';
 import useAuth from '../../hooks/use-Auth';
 import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons/';
+import Swiper from 'react-native-deck-swiper'
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -42,19 +43,14 @@ const HomeScreen = () => {
           <Ionicons name="chatbubbles-sharp" size={30} color="#FF5864" />
         </TouchableOpacity>
       </View>
-      {/* <View>
-        <Text>Homescreen</Text>
-        <Button
-          title="Go to Chat"
-          onPress={() =>
-            navigation.navigate(
-              // @ts-ignore
-              'Chat'
-            )
-          }
-        />
-        <Button title="Logout" onPress={logOut} />
-      </View> */}
+
+
+     <Swiper cards={DATA}
+     >
+
+       
+
+     </Swiper>
     </SafeAreaView>
   );
 };
