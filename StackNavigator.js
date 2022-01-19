@@ -7,9 +7,8 @@ import useAuth from './hooks/use-Auth';
 
 const Stack = createNativeStackNavigator();
 const StackNavigator = () => {
+  const { user } = useAuth();
 
-  const {user} = useAuth()
-  
   return (
     <Stack.Navigator>
       {user ? (
@@ -18,7 +17,11 @@ const StackNavigator = () => {
           <Stack.Screen name="Chat" component={ChatScreen} />
         </>
       ) : (
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          
+        />
       )}
     </Stack.Navigator>
   );

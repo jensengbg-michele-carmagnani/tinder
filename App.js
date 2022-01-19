@@ -8,12 +8,10 @@ LogBox.ignoreAllLogs(); // ignore all log notifications by message
 
 export default function App() {
   return (
-    <SafeAreaView style={tw('flex-1 justify-center')}>
-      <NavigationContainer>
-        <AuthProvider>
-          <StackNavigator />
-        </AuthProvider>
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <AuthProvider>
+        <StackNavigator />
+      </AuthProvider>
+    </NavigationContainer>
   );
 }
