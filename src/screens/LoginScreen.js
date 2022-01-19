@@ -3,7 +3,7 @@ import { useNavigation } from '@react-navigation/core';
 import {
   View,
   Text,
-  Button,
+  Pressable,
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
@@ -27,15 +27,15 @@ const LoginScreen = () => {
       >
         <TouchableOpacity
           style={[
-            tw('absolute bottom-40 w-52 bg-white p-2 rounded-2xl'),
+            tw('absolute bottom-40 w-52 bg-white p-4 rounded-2xl'),
             { marginHorizontal: '25%' },
           ]}
         >
-          <Button
-            style={tw('color-primary')}
-            title="Sign in with Google"
-            onPress={signInWithGoogle}
-          ></Button>
+          
+            <Text onPress={signInWithGoogle} style={tw('text-center  font-semibold')}>
+              Login with Google
+            </Text>
+     
         </TouchableOpacity>
       </ImageBackground>
     </View>
