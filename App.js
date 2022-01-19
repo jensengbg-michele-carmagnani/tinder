@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import StackNavigator from './StackNavigator';
 import { AuthProvider } from './hooks/use-Auth';
 import tw from 'tailwind-rn';
+import { LogBox } from 'react-native';
+LogBox.ignoreAllLogs(); // ignore all log notifications by message
 
 export default function App() {
   return (

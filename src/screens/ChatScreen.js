@@ -7,7 +7,7 @@ const ChatScreen = () => {
   return (
     <View style={tw('justify-center items-center h-full')}>
       <Text>Chatscreen</Text>
-      <Button title="Home" onPress={()=>{navigation.navigate('Home')}}/>
+      <Button title="Go to Home" onPress={()=>{navigation.navigate('Home')}}/>
     </View>
   )
 }
